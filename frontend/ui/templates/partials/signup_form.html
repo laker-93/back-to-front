@@ -1,0 +1,48 @@
+<header>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <p>BACK-TO-FRONT - SIGNUP</p>
+            </div>
+        </div>
+    </section>
+</header>
+<section class="section">
+    <div class="container">
+        <div class="container">
+            <div id="signupform">
+                <p>Create an account.</p>
+                <br>
+                <h2 class="subtitle">Sign Up</h2>
+                <form>
+                    <div class="column is-3">
+                          <div class="control">
+                            <input class="input" name="username" type="text" placeholder="username">
+                          </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="control">
+                            <input class="input" name="password" type="text" placeholder="password">
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="control">
+                            <input class="input" name="email" type="text" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="True" checked>
+                        <label class="px-3" class="py-6">Sign up to the newsletter.
+                           </label>
+                    </div>
+                    <div class="column is-3">
+                        <button class="button is-primary" hx-post="/user/create" hx-target="#signupform" hx-swap="innerHTML" hx-indicator="#spinner" hx-include="#newsletter">
+                            Create <img id="spinner" class="htmx-indicator loader" src="/imgs/spin">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

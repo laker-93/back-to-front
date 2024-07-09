@@ -1,0 +1,33 @@
+<div id="login-form">
+  <header>
+      <section class="hero is-primary">
+          <div class="hero-body">
+              <div class="container">
+                  <p>BACK-TO-FRONT - LOGIN</p>
+              </div>
+          </div>
+      </section>
+  </header>
+  <section class="section">
+      <div class="container">
+          <form>
+              <div class="column is-3">
+                  <div class="control">
+                      <input class="input" name="username" type="text" placeholder="username">
+                  </div>
+              </div>
+              <div class="column is-3">
+                  <div class="control">
+                      <input class="input" name="password" type="text" placeholder="password">
+                  </div>
+              </div>
+              <div class="column is-3">
+              <button class="button" hx-post="/user/login" hx-swap="outerHTML" hx-target="#login-form" hx-indicator="#spinner">
+                  login
+                  <span id="spinner" class="htmx-indicator loader"></span>
+              </button>
+              </div>
+          </form>
+      </div>
+  </section>
+</div>
