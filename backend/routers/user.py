@@ -4,7 +4,7 @@ from http import HTTPStatus
 from fastapi import APIRouter, Request, Depends
 from starlette.responses import JSONResponse
 
-from backend.controllers.db_controller import DbController
+from controllers.db_controller import DbController
 
 router = APIRouter()
 

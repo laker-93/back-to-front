@@ -5,7 +5,7 @@ from typing import Dict
 from fastapi import FastAPI
 from tinydb import TinyDB
 
-from backend.controllers.db_controller import DbController
+from controllers.db_controller import DbController
 
 
 

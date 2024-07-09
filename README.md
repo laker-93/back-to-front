@@ -2,13 +2,10 @@
 
 A demo HTMX app built with Python and FastAPI
 
-Run the back end with:
+## Run Instructions
 
-```commandline
-python backend/main.py
-```
-Run the front end with:
-
-```commandline
-python frontend/main.py
-```
+1. create venv
+2. `pip install -r requirements.txt`
+3. run back end (`python backend/main.py`)
+4. run front end (`python frontend/main.py`)
+5. navigate to 

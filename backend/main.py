@@ -3,7 +3,7 @@ import uvicorn
 import yaml
 from pathlib import Path
 
-from backend.context_managers.lifespan import lifespan
+from context_managers.lifespan import lifespan
 from routers import user
 
 

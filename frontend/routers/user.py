@@ -19,7 +19,7 @@ async def signup_form(
         request: Request,
         session_id: str | None = Cookie(None),
 ):
-    templates = Jinja2Templates(directory="ui/templates")
+    templates = Jinja2Templates(directory="frontend/ui/templates")
     config = request.app.state.config
 
     context = {"request": request}
@@ -74,7 +74,7 @@ async def login_form(request: Request,
                      session_id: str | None = Cookie(None),
                      hx_request: Optional[str] = Header(None),
                      ):
-    templates = Jinja2Templates(directory="ui/templates")
+    templates = Jinja2Templates(directory="frontend/ui/templates")
 
     config = request.app.state.config
 
@@ -139,7 +139,7 @@ async def login(
                 template = 'partials/failure.html'
                 error['response'] = response_json
 
-    templates = Jinja2Templates(directory="ui/templates")
+    templates = Jinja2Templates(directory="frontend/ui/templates")
     if success:
         context = {
             "request": request,
@@ -164,7 +164,7 @@ async def create(
         email: str = Form(...),
         newsletter: str | None = Form(True),
 ):
-    templates = Jinja2Templates(directory="ui/templates")
+    templates = Jinja2Templates(directory="frontend/ui/templates")
     print(f'username {username} password {password} session id {session_id}')
     data = {
         'username': username,
